@@ -82,6 +82,8 @@ type Lighthouse struct {
 }
 
 func main() {
+	// ここのURLは任意で変えれるようにする
+	// light-house-format.js は、結果をjsonの形に綺麗にするためのものなので必要
 	commandStr := "lighthouse https://konojunya.com --output json --quiet | node lighthouse-format.js"
 	out, err := exec.Command("sh", "-c", commandStr).Output()
 	if err != nil {
